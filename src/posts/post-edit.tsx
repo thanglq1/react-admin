@@ -1,8 +1,19 @@
-import { Edit, ReferenceInput, SimpleForm, TextInput } from "react-admin";
+import {
+  Edit,
+  ReferenceInput,
+  SimpleForm,
+  TextInput,
+  useRecordContext,
+} from "react-admin";
+
+const PostTitle = () => {
+  const record = useRecordContext();
+  return <span>Post {record ? `"${record.title}"` : ""}</span>;
+};
 
 const PostEdit = () => {
   return (
-    <Edit>
+    <Edit title={<PostTitle />}>
       <SimpleForm>
         <ReferenceInput source="userId" reference="users" />
         <TextInput source="id" />
