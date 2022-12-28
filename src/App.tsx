@@ -8,12 +8,13 @@ import PostCreate from "./posts/post-create";
 
 import PostIcon from "@mui/icons-material/Book";
 import UserIcon from "@mui/icons-material/Group";
+import Dashboard from "./dashboard/dashboard";
 
 const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider}>
+    <Admin dataProvider={dataProvider} dashboard={Dashboard}>
       <Resource
         name="users"
         list={UsersList}
