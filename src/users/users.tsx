@@ -1,5 +1,6 @@
 import { Datagrid, EmailField, List, SimpleList, TextField } from "react-admin";
 import { useMediaQuery, Theme } from "@mui/material";
+import CustomUrlField from "../components/custom-url-field";
 
 const UsersList = () => {
   const isSmall = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
@@ -19,7 +20,7 @@ const UsersList = () => {
           <EmailField source="email" />
           <TextField source="address.street" />
           <TextField source="phone" />
-          <TextField source="website" />
+          <CustomUrlField source="website" />
           <TextField source="company.name" />
         </Datagrid>
       )}
