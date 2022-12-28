@@ -1,6 +1,6 @@
 import jsonServerProvider from "ra-data-json-server";
 import "./App.css";
-import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
+import { Admin, Resource, ListGuesser } from "react-admin";
 import UsersList from "./users/users";
 import PostList from "./posts/posts";
 import PostEdit from "./posts/post-edit";
